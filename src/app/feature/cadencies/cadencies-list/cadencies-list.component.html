@@ -1,144 +1,222 @@
 <div *ngIf="show" ngxUiLoaderBlurred>
-    <div class="cadencies-list-container pages-box-cmn-20" *ngIf="isCadence">
-      <div class="grid-header-section customer-list">
-        <ul class="grid-right-list">
-          <li class="grid-right-list-item">
-            <div class="btn-container">
-              <button pButton type="button" pBadge value="{{ApplyFilterCount}}"
-                [ngClass]="ApplyFilterCount===0 ? 'hide-badge' : 'show-badge'" severity="danger"
-                badgeClass="p-badge-danger" class="p-button-secondary button-with-icon btn-150"
-                (click)="filterDropdownMenu.toggle($event)">{{
-                "FILTER" }}
-                <svg-icon src="{{ filterIcon }}" class="svg-icon"></svg-icon>
-                <p-overlayPanel #filterDropdownMenu>
-                  <ng-template pTemplate>
-                    <div class="filter-dropdown-content cmn-overlaypanel">
-                      <div class="paragraph-text-4 text-primary-1">{{ "Filter Options" }}</div>
-                      <div class="form-group">
-                        <label for="CustomerDisplayName">{{"Cadence Mode"}}</label>
-                        <div class="dropdown-container">
-                          <p-dropdown [options]="CadencyModeData" [(ngModel)]="selectedCadencyMode" optionLabel="name"
-                            [filter]="false" filterBy="name" [showClear]="selectedCadencyMode ? true : false"
-                            placeholder="{{'Select cadency Mode'}}" [resetFilterOnHide]="true">
-                            <ng-template pTemplate="selectedItem">
-                              <span class="cmn-dropdown-item cmn-dropdown-item-value"
-                                *ngIf="selectedCadencyMode">{{selectedCadencyMode.name }}</span>
-                            </ng-template>
-                            <ng-template let-country pTemplate="item">
-                              <span class="cmn-dropdown-item">{{ country.name }}</span>
-                            </ng-template>
-                          </p-dropdown>
-                        </div>
-                      </div>
-                      <!-- <div class="btn-container btn-between">
-                        <button pButton type="button" class="p-button-primary button-with-icon btn-100"
-                          (click)="cadenciesApplyFilter();filterDropdownMenu.hide()">{{ "ACTION.APPLY" | translate
-                          }}</button>
-                        <button pButton type="button" class="p-button-secondary button-with-icon btn-100"
-                          (click)="cadenciesClearFilter();filterDropdownMenu.hide()">{{ "ACTION.CLEAR" | translate
-                          }}</button>
-                      </div> -->
+  <div class="cadencies-list-container pages-box-cmn-20" *ngIf="isCadence">
+    <div class="grid-header-section customer-list">
+      <ul class="grid-right-list">
+        <li class="grid-right-list-item">
+          <div class="btn-container">
+            <button
+              pButton
+              type="button"
+              pBadge
+              value="{{ ApplyFilterCount }}"
+              [ngClass]="ApplyFilterCount === 0 ? 'hide-badge' : 'show-badge'"
+              severity="danger"
+              badgeClass="p-badge-danger"
+              class="p-button-secondary button-with-icon btn-150"
+              (click)="filterDropdownMenu.toggle($event)"
+            >
+              {{ "FILTER" }}
+              <svg-icon src="{{ filterIcon }}" class="svg-icon"></svg-icon>
+              <p-overlayPanel #filterDropdownMenu>
+                <ng-template pTemplate>
+                  <div class="filter-dropdown-content cmn-overlaypanel">
+                    <div class="paragraph-text-4 text-primary-1">
+                      {{ "Filter Options" }}
                     </div>
-                  </ng-template>
-                </p-overlayPanel>
-              </button>
-              <button pButton type="button" class="p-button-primary button-with-icon btn-150"
-                >{{ "ADD"  }}
-                <svg-icon src="{{ plusIcon }}" class="svg-icon"></svg-icon>
-              </button>
-            </div>
-          </li>
-        </ul>
-  
-      </div>
-  
-      <div class="table-container card-view-table grid-header-transparent">
-        <p-table #dt1 [value]="cadenciesGridData" [globalFilterFields]="['vin', 'year']" breakpoint="{{ Breakpoint }}"
-          responsiveLayout="{{ responsiveLayout }}" pageLinkSize="3" [paginator]="hideShowPaginationAndColumns"
-          [rows]="rows" [showCurrentPageReport]="ShowCurrentPageReport" scrollDirection="{{ ScrollDirection }}"
-          [totalRecords]="totalRecords" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-          [globalFilterFields]="['name']" [rowsPerPageOptions]="pageSizeValues">
-          <ng-template pTemplate="caption">
-            <div class="grid-header-section">
-              <ul class="grid-left-list">
-                <li class="grid-left-list-item">
-                  <div class="input-container">
-                    <input (input)="dt1.filterGlobal($event.target.value, 'contains')" [(ngModel)]="dtSearch"
-                      id="searchText" type="text" class="grid-input" pInputText placeholder="Search by cadency name" />
-                  </div>
-                </li>
-                <li class="grid-left-list-item">
-                  <div class="btn-container">
-                    <button pButton type="button" severity="danger" class="p-button-secondary button-with-icon btn-150"
+                    <div class="form-group">
+                      <label for="CustomerDisplayName">{{
+                        "Cadence Mode"
+                      }}</label>
+                      <div class="dropdown-container">
+                        <p-dropdown
+                          [options]="CadencyModeData"
+                          [(ngModel)]="selectedCadencyMode"
+                          optionLabel="name"
+                          [filter]="false"
+                          filterBy="name"
+                          [showClear]="selectedCadencyMode ? true : false"
+                          placeholder="{{ 'Select cadency Mode' }}"
+                          [resetFilterOnHide]="true"
+                        >
+                          <ng-template pTemplate="selectedItem">
+                            <span
+                              class="cmn-dropdown-item cmn-dropdown-item-value"
+                              *ngIf="selectedCadencyMode"
+                              >{{ selectedCadencyMode.name }}</span
+                            >
+                          </ng-template>
+                          <ng-template let-country pTemplate="item">
+                            <span class="cmn-dropdown-item">{{
+                              country.name
+                            }}</span>
+                          </ng-template>
+                        </p-dropdown>
+                      </div>
+                    </div>
+                    <div class="btn-container btn-between">
+                      <button
+                        pButton
+                        type="button"
+                        class="p-button-primary button-with-icon btn-100"
+                        (click)="
+                          cadenciesApplyFilter(); filterDropdownMenu.hide()
+                        "
                       >
-                      {{ "CLEAR"}}
-                      <svg-icon src="{{ clearFilter }}" class="svg-icon"></svg-icon>
-                    </button>
+                        {{ "APPLY" }}
+                      </button>
+                      <button
+                        pButton
+                        type="button"
+                        class="p-button-secondary button-with-icon btn-100"
+                        (click)="
+                          cadenciesClearFilter(); filterDropdownMenu.hide()
+                        "
+                      >
+                        {{ "CLEAR" }}
+                      </button>
+                    </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="chip-list" *ngIf="chipHideShow">
-              <p-chip [removable]="true" [removeIcon]="'pi pi-times'" *ngIf="showHideCadencyTypeCurrentFilterName"
-                (onRemove)="currentChipRemove('CadencyType')">
-                <div class="chip-text">
-                  <span class="semibold-text">{{"FORMSFIELD.CADENCETYPE" | translate}}</span><span
-                    class="text-secondary-2">{{"CHIPDETAIL.IS" | translate}}</span><span
-                    class="text-primary-1">{{currentFilterNameShowForCadencyType}}</span>
+                </ng-template>
+              </p-overlayPanel>
+            </button>
+            <button
+              pButton
+              type="button"
+              class="p-button-primary button-with-icon btn-150"
+            >
+              {{ "ADD" }}
+              <svg-icon src="{{ plusIcon }}" class="svg-icon"></svg-icon>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-container card-view-table grid-header-transparent">
+      <p-table
+        #dt1
+        [value]="cadenciesGridData"
+        [globalFilterFields]="['vin', 'year']"
+        breakpoint="{{ Breakpoint }}"
+        responsiveLayout="{{ responsiveLayout }}"
+        pageLinkSize="3"
+        [paginator]="hideShowPaginationAndColumns"
+        [rows]="rows"
+        [showCurrentPageReport]="ShowCurrentPageReport"
+        scrollDirection="{{ ScrollDirection }}"
+        [totalRecords]="totalRecords"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['name']"
+        [rowsPerPageOptions]="pageSizeValues"
+      >
+        <ng-template pTemplate="caption">
+          <div class="grid-header-section">
+            <ul class="grid-left-list">
+              <li class="grid-left-list-item">
+                <div class="input-container">
+                  <input
+                    (input)="dt1.filterGlobal($event.target.value, 'contains')"
+                    [(ngModel)]="dtSearch"
+                    id="searchText"
+                    type="text"
+                    class="grid-input"
+                    pInputText
+                    placeholder="Search by cadency name"
+                  />
                 </div>
-              </p-chip>
-              <p-chip [removable]="true" [removeIcon]="'pi pi-times'" *ngIf="showHideCadencyModeCurrentFilterName"
-                (onRemove)="currentChipRemove('CadencyMode')">
-                <div class="chip-text">
-                  <span class="semibold-text">{{"FORMSFIELD.CADENCEMODE" | translate}}</span><span
-                    class="text-secondary-2">{{"CHIPDETAIL.IS" | translate}}</span><span
-                    class="text-primary-1">{{currentFilterNameShowForCadencyMode}}</span>
+              </li>
+              <li class="grid-left-list-item">
+                <div class="btn-container">
+                  <button
+                    pButton
+                    type="button"
+                    severity="danger"
+                    class="p-button-secondary button-with-icon btn-150"
+                  >
+                    {{ "CLEAR" }}
+                    <svg-icon
+                      src="{{ clearFilter }}"
+                      class="svg-icon"
+                    ></svg-icon>
+                  </button>
                 </div>
-              </p-chip>
-            </div> -->
-          </ng-template>
-          <ng-template pTemplate="header">
-            <tr *ngIf="hideShowPaginationAndColumns">
-              <th class="{{ col.columnClass }}" *ngFor="let col of Cadencies">{{ col.gridHeaderTitle }}</th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-cadenciesGridData>
-            <tr>
-              <td class="td-image max-width-90">
-                <span class="p-column-title"></span>
-                <div>
-                  <p-avatar shape="square" class="p-element avatar-square-40 avatar-icon primary-opacity-7">
-                    <svg-icon src="{{cadenciesIcon}}" class="svg-icon"></svg-icon>
-                  </p-avatar>
-                </div>
-              </td>
-              <td class="td-name max-width-500">
-                <span class="p-column-title">{{"GRIDFIELD.CADENCENAME"}}</span>
-                <div class="wrap-text-all">
-                  <a>{{
-                    cadenciesGridData.name }}</a>
-                </div>
-              </td>
-              <td class="td-address max-width-300 text-right xl:text-center">
-                <span class="p-column-title">{{"Cadence Name"}}</span>
-                <div class="paragraph-text-4 wrap-text-all">{{ cadenciesGridData?.type?.name }}</div>
-              </td>
-              <td class="td-status max-width-200">
-                <span class="p-column-title">{{"Mode"}}</span>
-                <div class="paragraph-text-4 wrap-text-all">{{ cadenciesGridData?.mode?.name }}</div>
-              </td>
-              <td class="td-amount max-width-300 text-right xl:text-center">
-                <span class="p-column-title">{{"Customer(s)"}}</span>
-                <div class="circle-box m-0 xl:m-auto green">{{cadenciesGridData?.customers}}</div>
-              </td>
-              <td class="td-action max-width-120">
-                <span class="p-column-title">{{"Actions"}}</span>
-                <div class="btn-container btn-center">
-                  <!-- <button pButton type="button" class="more-vert-btn" (click)="moreVertMenu.toggle($event)"
+              </li>
+            </ul>
+          </div>
+          <div class="chip-list" *ngIf="chipHideShow">
+            <p-chip
+              [removable]="true"
+              *ngIf="showHideCadencyModeCurrentFilterName">
+              <div class="chip-text">
+                <span class="semibold-text">{{
+                  "Cadence Mode"
+                }}</span
+                ><span class="text-secondary-2">{{
+                  "is"
+                }}</span
+                ><span class="text-primary-1">{{
+                  currentFilterNameShowForCadencyMode
+                }}</span>
+                <i (click)="currentChipRemove('CadencyMode')" class="pi pi-times"></i>
+              </div>
+            </p-chip>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr *ngIf="hideShowPaginationAndColumns">
+            <th class="{{ col.columnClass }}" *ngFor="let col of Cadencies">
+              {{ col.gridHeaderTitle }}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cadenciesGridData>
+          <tr>
+            <td class="td-image max-width-90">
+              <span class="p-column-title"></span>
+              <div>
+                <p-avatar
+                  shape="square"
+                  class="p-element avatar-square-40 avatar-icon primary-opacity-7"
+                >
+                  <svg-icon
+                    src="{{ cadenciesIcon }}"
+                    class="svg-icon"
+                  ></svg-icon>
+                </p-avatar>
+              </div>
+            </td>
+            <td class="td-name max-width-500">
+              <span class="p-column-title">{{ "GRIDFIELD.CADENCENAME" }}</span>
+              <div class="wrap-text-all">
+                <a>{{ cadenciesGridData.name }}</a>
+              </div>
+            </td>
+            <td class="td-address max-width-300 text-right xl:text-center">
+              <span class="p-column-title">{{ "Cadence Name" }}</span>
+              <div class="paragraph-text-4 wrap-text-all">
+                {{ cadenciesGridData?.type?.name }}
+              </div>
+            </td>
+            <td class="td-status max-width-200">
+              <span class="p-column-title">{{ "Mode" }}</span>
+              <div class="paragraph-text-4 wrap-text-all">
+                {{ cadenciesGridData?.mode?.name }}
+              </div>
+            </td>
+            <td class="td-amount max-width-300 text-right xl:text-center">
+              <span class="p-column-title">{{ "Customer(s)" }}</span>
+              <div class="circle-box m-0 xl:m-auto green">
+                {{ cadenciesGridData?.customers }}
+              </div>
+            </td>
+            <td class="td-action max-width-120">
+              <span class="p-column-title">{{ "Actions" }}</span>
+              <div class="btn-container btn-center">
+                <!-- <button pButton type="button" class="more-vert-btn" (click)="moreVertMenu.toggle($event)"
                     [disabled]="isActionDisabled">
                     <svg-icon src="{{ moreVertGridIcon }}" class="svg-icon"></svg-icon>
                   </button> -->
-                  <!-- <p-overlayPanel #moreVertMenu styleClass="more-vert-container">
+                <!-- <p-overlayPanel #moreVertMenu styleClass="more-vert-container">
                     <ng-template pTemplate>
                       <div class="more-vert-dropdown-content cmn-overlaypanel">
                         <ul class="more-vert-list">
@@ -150,25 +228,25 @@
                       </div>
                     </ng-template>
                   </p-overlayPanel> -->
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="emptymessage" let-columns>
-            <tr>
-              <td [attr.colspan]="columns?.length">
-                No records found
-              </td>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="paginatorleft" let-state>{{"Show"}}</ng-template>
-        </p-table>
-      </div>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="columns?.length">No records found</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>{{
+          "Show"
+        }}</ng-template>
+      </p-table>
     </div>
-  
-    <!-- <cadency-no-record-found-data [noReCordFoundTitleText]="noRecordTitle" (addRecord)="redirectPage()" [showNoRecordAddButton]="checkPermission(permissionModuleId, 'isUpdate')"
+  </div>
+
+  <!-- <cadency-no-record-found-data [noReCordFoundTitleText]="noRecordTitle" (addRecord)="redirectPage()" [showNoRecordAddButton]="checkPermission(permissionModuleId, 'isUpdate')"
       [norecordFoundDataText]="noRecordFoundDataTextForCadency" *ngIf="!isCadence">
     </cadency-no-record-found-data>
   
     <cadency-alert (removeData)="isRemoveCadence($event)" *ngIf="visibleAlert"></cadency-alert> -->
-  </div>
+</div>
