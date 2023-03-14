@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Table } from 'primeng/table';
 import { Subject, takeUntil } from 'rxjs';
 import { imagePath, Pagination } from 'src/app/app-constants';
@@ -16,10 +17,12 @@ export class CadenciesListComponent implements OnInit {
 
   cadenciesGridData: any = [];
   cadenciesGridDataList: any = [];
+  candenceMenuData: any = [];
   selectedCadencyMode: any;
   currentFilterNameShowForCadencyMode: any;
   CadencyModeData: any[];
   selectCadenciesType: any;
+  deletedCadenceId: number = 0;
   currentFilterNameShowForCadencyType: any;
     // Image Relative Code
     clearFilter: string = this.images.clearFilter;
@@ -56,6 +59,7 @@ export class CadenciesListComponent implements OnInit {
     private messageService: MessageService,   
     private pagination: Pagination,
     private dropdownDataService: DropdownDataService,
+    private router: Router,
     private images: imagePath) {
       this.CadencyModeData = this.dropdownDataService.getCadencyModeData();
     }
@@ -63,6 +67,7 @@ export class CadenciesListComponent implements OnInit {
   ngOnInit(): void {
     this.getAllCadencies();
     this.getCanenciesHeader();
+    this.getCandenceMenuData();
   }
 
   getCanenciesHeader() {
@@ -126,6 +131,41 @@ export class CadenciesListComponent implements OnInit {
     if (searchType == "CadencyMode") {
       this.selectedCadencyMode = "";
       this.cadenciesApplyFilter();
+    }
+  }
+
+  getCandenceMenuData() {
+    this.candenceMenuData = [
+      {
+        id: 1,
+        label: 'Edit',
+      },
+      {
+        id: 2,
+        label: 'Delete',
+      },
+    ];
+  }
+
+  redirectPage(id?: number) {
+    if (id > 0) {
+      this.router.navigateByUrl(`cadencies/update-cadency/` + id);
+    } else {
+      this.router.navigateByUrl(`cadencies/add-cadency`);
+    }
+  }
+
+  menuClicked(event, obj) {
+    if (event?.label === 'Edit') {
+      this.redirectPage(obj?.id)
+    }
+    if (event?.label === 'Delete') {
+      this.deletedCadenceId = obj?.id;
+      const data = {
+        name: obj?.name,
+        isOpen: true
+      }
+    //  this.generalService.setOpenDeleteAlert(data);
     }
   }
 
