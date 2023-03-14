@@ -1,0 +1,17 @@
+<svg id="Group_20169" data-name="Group 20169" xmlns="http://www.w3.org/2000/svg" width="30" height="28.667" viewBox="0 0 30 28.667">
+  <g id="_x31_001_x2C___Alert_x2C__danger_x2C__warning_x2C__sign">
+    <g id="Group_20168" data-name="Group 20168">
+      <path id="Path_15409" data-name="Path 15409" d="M62.456,65.725,50.447,43.043a2.991,2.991,0,0,0-5.286,0L33.152,65.725a2.991,2.991,0,0,0,2.643,4.393H59.812a2.991,2.991,0,0,0,2.643-4.39Zm-2.643,3.02H35.795a1.62,1.62,0,0,1-1.432-2.378L46.372,43.684a1.619,1.619,0,0,1,2.863,0L61.243,66.367a1.62,1.62,0,0,1-1.432,2.378Z" transform="translate(-32.803 -41.451)" fill="#e76f51"/>
+      <g id="Group_20170" data-name="Group 20170" transform="translate(13.772 10.531)">
+        <g id="Group_20151" data-name="Group 20151">
+          <path id="Path_15405" data-name="Path 15405" d="M207.565,152.832c-.686,0-1.221.368-1.221,1.021,0,1.992.234,4.853.234,6.845,0,.519.452.737.988.737.4,0,.97-.217.97-.737,0-1.992.234-4.853.234-6.845a1.076,1.076,0,0,0-1.2-1.021Z" transform="translate(-206.343 -152.824)" fill="#e76f51"/>
+        </g>
+      </g>
+      <g id="Group_20171" data-name="Group 20171" transform="translate(13.718 20.295)">
+        <g id="Group_20153" data-name="Group 20153">
+          <path id="Path_15406" data-name="Path 15406" d="M206.809,312.111A1.288,1.288,0,1,0,208.1,313.4a1.288,1.288,0,0,0-1.288-1.288Z" transform="translate(-205.521 -312.111)" fill="#e76f51"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

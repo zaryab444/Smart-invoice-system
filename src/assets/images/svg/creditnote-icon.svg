@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.001" height="43.667" viewBox="0 0 45.001 43.667">
+  <g id="Credit_Note_Icon" data-name="Credit Note Icon" transform="translate(-44.56 -23.997)">
+    <path id="Path_189" data-name="Path 189" d="M385.014,446.73a2.569,2.569,0,0,1-2.555,2.557" transform="translate(-306.436 -383.599)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_18" data-name="Line 18" x1="27.906" transform="translate(48.117 65.688)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <path id="Path_190" data-name="Path 190" d="M48.117,449.287a2.566,2.566,0,0,1-2.557-2.556" transform="translate(0 -383.6)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <path id="Path_191" data-name="Path 191" d="M45.561,63.131v-27.9L56.626,25h19.4" transform="translate(-0.001 0)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <path id="Path_192" data-name="Path 192" d="M382.459,25a2.565,2.565,0,0,1,2.555,2.555" transform="translate(-306.436 0)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_19" data-name="Line 19" y2="16.919" transform="translate(78.578 27.552)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_20" data-name="Line 20" y2="9.438" transform="translate(57.133 24.997)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <path id="Path_193" data-name="Path 193" d="M159.8,129.369a1.375,1.375,0,0,1-1.367,1.368" transform="translate(-102.668 -94.934)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_21" data-name="Line 21" x1="10.206" transform="translate(45.56 35.802)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_26" data-name="Line 26" x2="24.534" transform="translate(49.597 42.736)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_27" data-name="Line 27" x2="16.872" transform="translate(49.597 51.241)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <line id="Line_28" data-name="Line 28" x2="18.078" transform="translate(49.597 59.748)" fill="none" stroke="#ffc792" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2.613" stroke-width="2"/>
+    <path id="Dollar" d="M5.086,5.635,2.479,4.872a.712.712,0,0,1,.2-1.4h1.6a1.474,1.474,0,0,1,.826.254.376.376,0,0,0,.471-.048l.84-.821a.391.391,0,0,0-.043-.592,3.414,3.414,0,0,0-2.088-.724V.386A.387.387,0,0,0,3.9,0H3.126A.387.387,0,0,0,2.74.386V1.545h-.06A2.645,2.645,0,0,0,.048,4.433,2.764,2.764,0,0,0,2.071,6.765l2.475.724a.712.712,0,0,1-.2,1.4h-1.6a1.474,1.474,0,0,1-.826-.254.376.376,0,0,0-.471.048L.608,9.5a.391.391,0,0,0,.043.592,3.414,3.414,0,0,0,2.088.724v1.159a.387.387,0,0,0,.386.386H3.9a.387.387,0,0,0,.386-.386V10.811A2.727,2.727,0,0,0,6.837,9.056a2.651,2.651,0,0,0-1.75-3.421Z" transform="translate(63.277 27.552)" fill="#ffa149"/>
+    <g id="Plus">
+      <circle id="Ellipse_41" data-name="Ellipse 41" cx="11" cy="11" r="11" transform="translate(67.561 45.664)" fill="#ffa149"/>
+      <g id="Group_19696" data-name="Group 19696" transform="translate(73.629 51.664)">
+        <line id="Line_43" data-name="Line 43" x2="10" transform="translate(-0.069 4.931)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <line id="Line_44" data-name="Line 44" x2="9.71" transform="translate(4.855) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

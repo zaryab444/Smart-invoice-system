@@ -1,0 +1,12 @@
+{
+    "data":[
+        {
+           "customers":1,
+           "id":272,
+           "mode":{"id":44,"name":"Invoice"},
+           "name":"Zaryab customer",
+           "sourceModifiedDate":"2023-02-28T10:11:14.42",
+           "type":{"id":54,"name":"Customer"}
+        }
+    ]
+}

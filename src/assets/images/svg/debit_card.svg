@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14.062" viewBox="0 0 20 14.062">
+  <g id="Group_20429" data-name="Group 20429" transform="translate(0 -11.603)">
+    <g id="Debit_Card" transform="translate(0 11.603)">
+      <g id="Group_20424" data-name="Group 20424">
+        <path id="Path_17627" data-name="Path 17627" d="M16.875,25.665H3.125A3.129,3.129,0,0,1,0,22.541V14.728A3.129,3.129,0,0,1,3.125,11.6h13.75A3.129,3.129,0,0,1,20,14.728v7.813A3.129,3.129,0,0,1,16.875,25.665Zm-13.75-12.5a1.564,1.564,0,0,0-1.563,1.563v7.813A1.564,1.564,0,0,0,3.125,24.1h13.75a1.564,1.564,0,0,0,1.562-1.562V14.728a1.564,1.564,0,0,0-1.562-1.562Z" transform="translate(0 -11.603)" fill="#252422"/>
+      </g>
+      <g id="Group_20425" data-name="Group 20425" transform="translate(3.125 9.375)">
+        <path id="Path_17628" data-name="Path 17628" d="M25.182,49.807H12.995a.781.781,0,1,1,0-1.562H25.182a.781.781,0,1,1,0,1.562Z" transform="translate(-12.214 -48.244)" fill="#252422"/>
+      </g>
+      <g id="Group_20426" data-name="Group 20426" transform="translate(3.125 3.125)">
+        <path id="Path_17629" data-name="Path 17629" d="M14.558,28.5A2.344,2.344,0,1,1,16.9,26.16,2.344,2.344,0,0,1,14.558,28.5Zm0-3.125a.781.781,0,1,0,.781.781.781.781,0,0,0-.781-.781Z" transform="translate(-12.214 -23.817)" fill="#ffa149"/>
+      </g>
+      <g id="Group_20427" data-name="Group 20427" transform="translate(8.917 3.583)">
+        <path id="Path_17630" data-name="Path 17630" d="M35.081,29.149a.781.781,0,0,1,0-1.1.781.781,0,0,0,0-1.1.781.781,0,1,1,1.1-1.1,2.344,2.344,0,0,1,0,3.315.781.781,0,0,1-1.1,0Z" transform="translate(-34.853 -25.605)" fill="#ffa149"/>
+      </g>
+      <g id="Group_20428" data-name="Group 20428" transform="translate(13.75 3.125)">
+        <path id="Path_17631" data-name="Path 17631" d="M56.084,25.379H54.522a.781.781,0,1,1,0-1.562h1.562a.781.781,0,0,1,0,1.562Z" transform="translate(-53.74 -23.817)" fill="#252422"/>
+      </g>
+    </g>
+  </g>
+</svg>

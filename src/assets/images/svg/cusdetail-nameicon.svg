@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15">
+  <g id="_7._Id_Card" data-name="7. Id Card" transform="translate(0.2 -5.5)">
+    <g id="Rectangle_235" data-name="Rectangle 235" transform="translate(-0.2 5.5)" fill="#fff" stroke="#ffa149" stroke-width="1">
+      <rect width="24" height="15" rx="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="23" height="14" rx="2.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_231" data-name="Rectangle 231" width="10" height="2" rx="1" transform="translate(2.8 9.5)" fill="#ffa149"/>
+    <rect id="Rectangle_232" data-name="Rectangle 232" width="7" height="2" rx="1" transform="translate(2.8 12.5)" fill="#ffa149" opacity="0.65"/>
+    <rect id="Rectangle_233" data-name="Rectangle 233" width="5" height="2" rx="1" transform="translate(2.8 15.5)" fill="#ffa149" opacity="0.5"/>
+    <g id="Group_23558" data-name="Group 23558" transform="translate(-828.662 -298.531)">
+      <g id="user-1183672" transform="translate(841.462 312.204)">
+        <path id="Path_18002" data-name="Path 18002" d="M20.9,20.739V19.455c0-1.388-1.908-2.532-4.25-2.532s-4.25,1.145-4.25,2.532v1.284" transform="translate(-12.4 -16.923)" fill="#ffa149"/>
+      </g>
+      <path id="Path_18002-2" data-name="Path 18002" d="M20.487,10.121a2.429,2.429,0,1,1-2.429-2.429,2.429,2.429,0,0,1,2.429,2.429Z" transform="translate(827.654 299.308)" fill="#ffa149" opacity="0.7"/>
+    </g>
+  </g>
+</svg>

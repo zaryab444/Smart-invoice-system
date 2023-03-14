@@ -1,0 +1,136 @@
+$black: #000000;
+$white: #ffffff;
+$transparent: transparent;
+
+$primary-1: #ffa149;
+$primary-2: #707070;
+$primary-3: #48cae4;
+$primary-4: #ff7d00;
+$primary-5: #05afb2;
+$primary-6: #09a191;
+$primary-7: #c461f5;
+$primary-8: #dc3545;
+$primary-9: #27ae60;
+$primary-10: #252422;
+$primary-11: #040505;
+$primary-12: #707070;
+$primary-13: #219ebc;
+$primary-14: #5c5c5c;
+$primary-15: #e76f51;
+$primary-16: #115A82;
+$primary-17: #BC930B;
+$primary-18: #1A6CAB;
+$primary-19: #885F0D;
+$primary-20: #FF7D0C;
+$primary-24: #FF7069;
+$primary-25: #15ceba;
+$secondary-1: #dddddd;
+$secondary-2: #9a9a9a;
+$secondary-3: #f5f5f5;
+$secondary-4: #fbfbfb;
+$secondary-5: #f9f9f9;
+$secondary-6: #d4d4d4;
+$secondary-7: #e8e8e8;
+$secondary-8: #fafcfd;
+$secondary-9: #e5e5e5;
+$secondary-10: #006d77;
+$secondary-11: #393939;
+$secondary-12: #001c77;
+$secondary-13: #b23414;
+$secondary-14: #77004b;
+$secondary-15: #00772c;
+$secondary-16: #f5f8fa;
+$secondary-17: #f2f2f2;
+$secondary-18: #f1f1f1;
+$secondary-19: #f00f00;
+$secondary-20: #ffbd7f;
+$secondary-21: #ae2762;
+$secondary-22: #f3dffd;
+$secondary-23: #d3ecf2;
+$secondary-24: #c8c8c8;
+$secondary-25: #0F6EC1;
+$secondary-26: #EBEBEB;
+$secondary-27: #edf4f9;
+$secondary-28: #F0D7FC;
+$secondary-29: #F8FBFF;
+$secondary-30: #BC8321;
+$secondary-31: #E965EE;
+$secondary-32: #67B7DC;
+$secondary-33: #6771DC;
+$secondary-34: #A367DC;
+$secondary-35: #DC67CE;
+$secondary-36: #959595;
+$secondary-37: #eeeeee;
+$secondary-38: #1d2634;
+$secondary-39: #FDF0ED;
+$secondary-40: #676767;
+$secondary-41: #005B52;
+$secondary-42: #8e395c;
+$secondary-43: #6AD49B;
+$secondary-44: #FAFBFC;
+$secondary-45: #FFF7F0;
+$secondary-46: #27ae60;
+$secondary-47: #dc3545;
+$secondary-48: #93c8ff52;
+$secondary-49: #F4EAF9;
+$secondary-50:#B23414;
+
+$fs-9: 9px;
+$fs-10: 10px;
+$fs-11: 11px;
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-15: 15px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-22: 22px;
+$fs-23: 23px;
+$fs-24: 24px;
+$fs-25: 25px;
+$fs-26: 26px;
+$fs-28: 28px;
+$fs-30: 30px;
+$fs-40: 40px;
+
+$selection-background-color: $primary-1;
+$selection-color: $white;
+
+$scroll-width: 6px;
+$scroll-height: 3px;
+$scroll-thumb-radius: 20px;
+$scroll-thumb-bg: $secondary-2;
+$scroll-thumb-hover-bg: $primary-2;
+$scroll-track-bg: $secondary-1;
+
+$font-regular: "Montserrat-Regular";
+$font-italic: "Montserrat-Italic";
+$font-black: "Montserrat-Black";
+$font-blackItalic: "Montserrat-BlackItalic";
+$font-bold: "Montserrat-Bold";
+$font-boldItalic: "Montserrat-BoldItalic";
+$font-semiBold: "Montserrat-SemiBold";
+$font-semiBoldItalic: "Montserrat-SemiBoldItalic";
+$font-extraBold: "Montserrat-ExtraBold";
+$font-extraBoldItalic: "Montserrat-ExtraBoldItalic";
+$font-light: "Montserrat-Light";
+$font-lightItalic: "Montserrat-LightItalic";
+$font-extraLight: "Montserrat-ExtraLight";
+$font-extraLightItalic: "Montserrat-ExtraLightItalic";
+$font-medium: "Montserrat-Medium";
+$font-mediumItalic: "Montserrat-MediumItalic";
+$font-thin: "Montserrat-Thin";
+$font-thinItalic: "Montserrat-ThinItalic";
+
+$breakpoints: (
+  xxs: 360px,
+  xs: 575px,
+  sm: 768px,
+  md: 991px,
+  ipad: 1080px,
+  lg: 1199px,
+  xl: 1400px,
+  xxl: 1600px,
+  xxxl: 1750px,
+);

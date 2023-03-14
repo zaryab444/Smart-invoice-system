@@ -1,0 +1,150 @@
+/* Define mixin with text style */
+@mixin text-style($fontSize, $line-height, $font-family, $color: $black, $letter-space: 0px) {
+    font-size: $fontSize;
+    line-height: $line-height;
+    font-family: $font-family;
+    @if $color  !=null {
+      color: $color;
+    }
+    @if $letter-space  !=0px {
+      letter-spacing: $letter-space;
+    }
+  }
+  
+  /* Define mixin with Scroll Mixin */
+  @mixin scroll-style() {
+    &::-webkit-scrollbar {
+      width: $scroll-width;
+      height: $scroll-height;
+    }
+    &::-webkit-scrollbar-track {
+      background: $scroll-track-bg;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scroll-thumb-bg;
+      border-radius: $scroll-thumb-radius;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $scroll-thumb-hover-bg;
+    }
+  }
+  
+  // Define mixin with Avatar control
+  @mixin avatar-square-style($size, $borderRadius) {
+    .p-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $size;
+      height: $size;
+      border-radius: $borderRadius;
+      img {
+        border-radius: $borderRadius;
+      }
+      @content;
+    }
+  }
+  
+  @mixin avatar-circle-style($size) {
+    .p-avatar-circle {
+      width: $size;
+      height: $size;
+    }
+  }
+  
+  // Sidebar width & customize comman Mixin
+  @mixin sidebarCommanStructure($width: null) {
+    .p-element {
+      .p-sidebar {
+        .p-sidebar-content {
+          @content;
+        }
+      }
+    }
+  }
+  
+  // Placeholder style
+  @mixin comman-placeholder-style() {
+    &.p-placeholder, &::placeholder, &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+      @include text-style($fs-14, 16px, $font-regular, $secondary-2);
+      @include media-breakpoint-down(xxl) {
+        font-size: $fs-12;
+        padding: 10px;
+      }
+    }
+  }
+  
+  // Status Dropdown Comman Style
+  @mixin status-dropdown-dynamic-generate($dropdownBackground, $iconColor) {
+    .p-dropdown {
+      background: rgb($dropdownBackground, 0.1);
+      .p-dropdown-label {
+        .cmn-dropdown-item {
+          @include text-style($fs-12, 14px, $font-regular, $dropdownBackground);
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      .p-dropdown-trigger {
+        background: rgb($dropdownBackground, 0.1);
+        .p-dropdown-trigger-icon {
+          color: $iconColor;
+        }
+      }
+    }
+  }
+  
+  // Select Button Comman Style
+  @mixin select-toggle-button-style($textColor, $borderWithBackground) {
+    &.p-selectbutton {
+      display: flex;
+      border-radius: 8px;
+      background: $white;
+      border: 1px solid $borderWithBackground;
+      overflow: hidden;
+      @include media-breakpoint-down(xs) {
+        border-radius: 4px;
+      }
+      .p-button {
+        background-color: $white;
+        border: 1px solid $transparent;
+        @include text-style($fs-14, 16px, $font-regular, $textColor);
+        @include media-breakpoint-down(xs) {
+          @include text-style($fs-12, 14px, $font-regular, $textColor);
+        }
+        &:not(.p-disabled) {
+          &:not(.p-highlight) {
+            &:hover {
+              color: $textColor;
+              background-color: $white;
+              border-color: $transparent;
+            }
+          }
+        }
+        &.p-highlight {
+          background-color: $borderWithBackground;
+          &:hover {
+            color: $textColor;
+            background-color: $borderWithBackground;
+            border-color: $transparent;
+          }
+        }
+      }
+    }
+  }
+  
+  // flex property
+  @mixin display-align-justify($display, $alignItem, $justifyContent) {
+    display: $display;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+  }
+  
+  // Responsive Mixin
+  @mixin media-breakpoint-down($breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  }
+  
